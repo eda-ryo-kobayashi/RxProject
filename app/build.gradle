@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 25
@@ -31,7 +30,7 @@ android {
     }
 }
 
-def supportVersion = '25.3.0'
+def supportVersion = '25.3.1'
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -42,9 +41,6 @@ dependencies {
     compile "com.android.support:support-dynamic-animation:$supportVersion"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-
-    // Data Binding
-    apt 'com.android.databinding:compiler:2.3.0'
 
     // RetroLambda Config
     retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.5.0'
